@@ -7,7 +7,7 @@ class SaveksController < ApplicationController
     before = Time.at((params[:before] || Time.now).to_i)
     count = params[:count] || 10
     @saveks = Savek.where(updated_at: Time.at(0)..before).limit(count)
-    @last_count = @saveks.last.updated_at.to_i
+    @last_count = @saveks.last.try(:updated_at).try(:to_i)
   end
 
   # GET /saveks/1
