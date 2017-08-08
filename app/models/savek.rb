@@ -2,6 +2,24 @@ class Savek < ActiveRecord::Base
 
 	default_scope { order(updated_at: :desc) }
 
+  STOCK_LIST = [
+    {
+      name: 'BND (Bonds)',
+      exchange: 'NYSEARCA',
+      ticker: 'BND'
+    },
+    {
+      name: 'S&P 500',
+      exchange: 'INDEXSP',
+      ticker: '.INX'
+    },
+    {
+      name: 'VNQ (Real-estate)',
+      exchange: 'NYSEARCA',
+      ticker: 'VNQ'
+    }
+  ]
+
 	class << self
 		def get_random_first_name
 			['John', 'Johnny', 'Janardhan', 'Michael', 'Ramesh', 'Suresh', 'Vishesh'].sample
@@ -61,7 +79,5 @@ class Savek < ActiveRecord::Base
               address: Savek.random_address, 
               phone: Savek.random_phone)
 		end
-
 	end
-
 end
