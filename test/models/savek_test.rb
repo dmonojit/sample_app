@@ -1,7 +1,5 @@
-require 'test_helper'
+require_relative '../test_helper.rb'
 
-class SavekTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class SavekTest < ActionDispatch::IntegrationTest
+
 end
