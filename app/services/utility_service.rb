@@ -1,3 +1,5 @@
+require 'net/http'
+
 class UtilityService
 
   STOCK_EXPIRY_TIME = 1.minute
@@ -20,6 +22,7 @@ class UtilityService
       uri.query = URI.encode_www_form({ q: query.join(",") })
 
       fresh_response = Net::HTTP.get_response(uri)
+
       if fresh_response.is_a?(Net::HTTPSuccess)
         # for some reason google's API returns result strating with `//`
         # https://finance.google.com/finance/info?q=INDEXDJX:.DJI,INDEXSP:.INX,INDEXNASDAQ:NDX

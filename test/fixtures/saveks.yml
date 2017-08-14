@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  first_name: MyString
-  last_name: MyString
-  occupation: MyString
-  latitude: 
-  longitude: 
-  radius: 
-  avg_rating: 
+  first_name: Karthik
+  last_name: YR
+  occupation: Engineer
+  latitude: 12.345645
+  longitude: 77.235246
+  radius: 230
+  avg_rating: 2.4
   ratings: 1
-  gender: MyString
+  gender: Male
+  address: Marathahalli, Bangalore
+  phone: 9876543210
 
 two:
   first_name: MyString
